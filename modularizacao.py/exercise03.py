@@ -1,6 +1,16 @@
-i = []
-for a in range(5):
-    musicas = input(f"Digite a {a + 1}º música...\n")
-    i.append(musicas)
+def calcular_imposto(valor):
+    if valor < 1000:
+        imposto = valor * 0.1
+    elif valor < 2000:
+        imposto = valor * 0.13
+    else:
+        imposto = valor * 0.2
 
-print(i)
+    return imposto
+
+preço_produto1 = 560
+preço_produto2 = 1570
+imposto_produto1 = calcular_imposto(preço_produto1)
+imposto_produto2 = calcular_imposto(preço_produto2)
+print(imposto_produto1)
+print(imposto_produto2)
